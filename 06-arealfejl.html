@@ -13,20 +13,26 @@
         let bredde = prompt("Angiv Bredde");
         let længde = prompt("Angiv Længde");
         //let areal = længde * bredde;
-        function areal(l, b) {
-            return (l * b);
+
+        function areal(længde, bredde) {
+            let areal = (længde * bredde);
+            if (areal == 0) {
+                return (`Husk længde og bredde skal være tal. \n prøv igen`);
+            } else if (isNaN(areal)) {
+                return (`Fejl. Husk bredde og længde skal være tal /n Prøv igen.`);
+            } else {
+                return (`Arealet er ${areal}. \n Vil du lave et nyt areal?`)
+            }
         }
-        let resultat =
-            `Arealet er ${areal} kvadratmeter. Har du brug for et nyt areal?`;
+
+        let resultat = areal(længde, bredde);
 
         confirm(resultat);
 
         if (confirm) {
             location.reload();
         }
-        if{NaN}{
-            alert("Indsæt venligst tal")
-        }
+
     </script>
 
 
